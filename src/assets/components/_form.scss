@@ -1,0 +1,79 @@
+$input-background-color: rgba(50, 50, 50, 0.70);
+
+.task-section{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    padding: 10%;
+    
+    .new-task{
+        padding: 10px;
+        display: flex;
+        .new-task-submit{
+            @include buttons-submit-function;
+        }
+        .new-task-submit:hover{
+            color: greenyellow
+        }
+        
+        .new-task-input{
+            flex: 1 1 0%;
+            background-color: $input-background-color;
+            padding: 7px;
+            border-radius: 1rem;
+            border-color: transparent;
+            margin-right: 1rem;
+            color: $input-text-color;
+        }
+        .new-task-input::placeholder{
+            color: $input-text-color;
+        }
+        
+        .new-task-sumbit{
+            color: rgb(220, 50, 170);
+        }
+    }
+
+    .tasks-list{
+        flex-direction: column;
+        justify-content: space-between;        
+        overflow-y: auto;
+        display: none;
+        
+        .tasks-list-inner{
+            flex-direction: row;
+            background-color: $input-background-color;
+            padding: 10px;
+            border-radius: 1rem;
+            margin-bottom: 1rem;
+            display: flex;
+            cursor: move;
+
+            .task-text{
+                @include buttons-submit-background;
+            }
+            
+            .buttons{
+                
+                .edit{
+                    @include buttons-submit-function;
+                }
+                .edit:hover{
+                    color: aqua;
+                }
+
+                .delete{
+                    @include buttons-submit-function;
+                }
+                .delete:hover{
+                    color:crimson;
+                }
+                
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+
+html {
+    height: 100%;
+    width: 100%;
+    body{
+        font-family: 'Be Vietnam Pro', sans-serif;
+        background-image: url('../assets/background.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 0;
+       
+    }
+}
+
+@import "./mixins";
+@import "./components/header";
+@import "./components/form";
+@import "./components/drag";
+@import "./components/footer";
+

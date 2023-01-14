@@ -1,0 +1,22 @@
+$input-text-color: rgb(235, 235, 235);
+
+@mixin buttons-submit-background{
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+    color: $input-text-color;
+}
+
+@mixin buttons-submit-function{
+    @include buttons-submit-background;
+    cursor: pointer;
+    transition: color 0.4s;
+}
+
+@mixin text_color{
+    background-image: linear-gradient(to right, #00ccff, #f50097);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}

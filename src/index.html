@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "./assets/global.scss">
+    <title>Todolist</title>
+</head>
+<body>
+    
+    <header>
+        <label class = "label">TODOLIST</label>
+    </header>
+    
+    <main>
+        
+        <section class = "task-section">
+            
+            <form class = "new-task">
+                <input type="text" class="new-task-input" placeholder="Add a new task here" />
+                <input type="submit" class="new-task-submit" value="Add task" />    
+            </form>
+            
+            <h1>Task list</h1>
+            
+            <div class = "tasks-list">
+
+            </div>
+            
+            <template id = "templateTask">
+                
+                <div class = "tasks-list-inner" draggable="true">
+                    
+                    <div class = "checkboxs">
+                        <input type="checkbox" class="task-checkbox" id="checkbox">
+                        <label for="checkbox"></label>
+                        <span id="checkmark"></span>
+                    </div>
+                    
+                    <div class = "task">
+                        <input type="text" class="task-text" value="value" readonly/>
+                    </div>
+                    
+                    <div class = "buttons">
+                        <button class="edit">Edit</button>
+                        <button class="delete">Delete</button>
+                    </div>
+                
+                </div>  
+                    
+            </template> 
+
+            <script type="module" src="./utils/form.js"></script>
+            <script type="module" src="./utils/drag.js"></script>
+
+        </section>    
+    
+    </main>
+
+    <footer>
+        <p>Készítette: Nové Norbert István 2023</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+{
+  "name": "todolist",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev:start": "nodemon server.js",
+    "dev:parcel": "npx parcel src/index.html",
+    "dev": "concurrently -p name \"npm:dev:*\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mongoose": "^6.8.0",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.8.2",
+    "concurrently": "^7.6.0",
+    "dotenv": "^16.0.3",
+    "nodemon": "^2.0.20",
+    "parcel": "^2.8.2"
+  }
+}
